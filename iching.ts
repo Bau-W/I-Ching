@@ -56,9 +56,9 @@ export const calculateHexagram = (
     const strokes = data.strokes || 0;
     // 上卦 = 筆畫 % 8
     shangIndex = (strokes % 8) || 8;
-    // 下卦 = 從上卦開始往後數 (時辰 % 8) 位
+    // 下卦 = 從上卦序數開始往下數 (時辰 % 8) 位
     const branchRem = (branchIndex % 8) || 8;
-    xiaIndex = (shangIndex + branchRem - 1) % 8 + 1;
+    xiaIndex = ((shangIndex + branchRem - 1) % 8) + 1;
     // 動爻 = (筆畫 + 時辰) % 6
     changingLine = ((strokes + branchIndex) % 6) || 6;
   } else {
@@ -66,10 +66,10 @@ export const calculateHexagram = (
     const n2 = data.numbers?.[1] || 0;
     // 上卦 = 第一數 % 8
     shangIndex = (n1 % 8) || 8;
-    // 下卦 = 從上卦開始往後數 (時辰 % 8) 位
+    // 下卦 = 從上卦序數開始往下數 (時辰 % 8) 位
     const branchRem = (branchIndex % 8) || 8;
-    xiaIndex = (shangIndex + branchRem - 1) % 8 + 1;
-    // 動爻 = (第一數 + 第二數) % 6
+    xiaIndex = ((shangIndex + branchRem - 1) % 8) + 1;
+    // 動爻 = (數字1 + 數字2) % 6
     changingLine = ((n1 + n2) % 6) || 6;
   }
 

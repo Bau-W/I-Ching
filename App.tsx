@@ -170,7 +170,7 @@ const App: React.FC = () => {
                     : `數字 ${result.inputDetails.numbers?.join(', ')}`}
                 </span></p>
                 {result.inquiry && (
-                  <p className="mt-1 border-t border-stone-200 pt-1">所求：<span className="text-slate-900 italic">「{result.inquiry}」</span></p>
+                  <p className="mt-1 border-t border-stone-200 pt-1">所求：<span className="text-slate-900">「{result.inquiry}」</span></p>
                 )}
              </div>
              <button onClick={reset} className="text-xs bg-stone-200 hover:bg-stone-300 text-slate-700 px-3 py-1.5 rounded-lg transition-colors serif">重新起卦</button>
