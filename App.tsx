@@ -173,7 +173,6 @@ const App: React.FC = () => {
                   <p className="mt-2 border-t border-stone-200 pt-2 font-medium">所求：<span className="text-slate-900">「{result.inquiry}」</span></p>
                 )}
              </div>
-             <button onClick={reset} className="text-sm font-bold bg-stone-200 hover:bg-stone-300 text-slate-700 px-5 py-2.5 rounded-lg transition-colors serif">重新起卦</button>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -232,6 +231,19 @@ const App: React.FC = () => {
                     ))}
                     <div className="mt-16 pt-10 border-t border-stone-100 text-slate-500 text-base italic leading-relaxed">
                       解析參考：王思迅《易經白話講座》。以上解析內容由靈曜 AI 輔助生成。
+                    </div>
+                    
+                    {/* 重新起卦按鈕移至此處 */}
+                    <div className="mt-12 flex justify-center">
+                      <button 
+                        onClick={reset} 
+                        className="group flex items-center gap-2 text-base font-bold bg-slate-100 hover:bg-slate-200 text-slate-800 px-8 py-4 rounded-2xl transition-all shadow-sm hover:shadow-md serif border border-slate-200"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:rotate-180 transition-transform duration-500" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
+                        </svg>
+                        重新起卦
+                      </button>
                     </div>
                  </div>
                )}
